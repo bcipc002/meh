@@ -22,5 +22,32 @@ $application = new Zend_Application(
     APPLICATION_ENV,
     APPLICATION_PATH . '/configs/application.ini'
 );
+
+/**Routing Info*/
+$FrontController=Zend_Controller_Front::getInstance();
+$Router = $FrontController->getRouter();
+
+$Router->addRoute("login", new Zend_Controller_Router_Route(
+                           '/login',
+                           array('module' => 'default',
+								 'controller' => 'index',
+                           		 'action' => 'login'
+)));
+
+$Router->addRoute("browseCycles", new Zend_Controller_Router_Route(
+							'/browse/cycles/:cyclename',
+							array('cyclename' => 'Harley Davidson',
+								  'controller' => 'browse',
+								  'action' => 'cycle'
+)));
+
+$Router->addRoute("viewCycle", new Zend_Controller_Router_Route(
+				  		   '/view/:cyclename',
+		          		   array('cyclename' => 'Harley Davidson',
+				  		   		 'controller' => 'view',
+				           		 'action' => 'cycles'
+)));
+
+
 $application->bootstrap()
             ->run();

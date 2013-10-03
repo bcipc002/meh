@@ -1,6 +1,6 @@
 <?php
 
-class IndexController extends Zend_Controller_Action
+class BrowseController extends Zend_Controller_Action
 {
 
     public function init()
@@ -13,7 +13,7 @@ class IndexController extends Zend_Controller_Action
         // action body
     }
 
-    public function loginAction()
+    public function cycleAction()
     {
         // action body
     }
