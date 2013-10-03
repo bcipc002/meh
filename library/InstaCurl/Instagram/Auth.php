@@ -34,9 +34,9 @@ class Auth {
      * @access protected
      */
         protected $config = array(
-        'client_id'     => '',
-        'client_secret' => '',
-        'redirect_uri'  => '',
+        'client_id'     => '49b2eda6991b4855810bb2043eda002b',
+        'client_secret' => 'a9131a6c289249ad914b3e8ab678e862',
+        'redirect_uri'  => 'http://hack.odeanmaye.com',
         'grant_type'    => 'authorization_code',
         'scope'         => array( 'basic' ),
         'display'       => ''
